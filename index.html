@@ -10,7 +10,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>Senin İçin ❤️</title>
+    <title>Güzel Berra'm ❤️</title>
 
     <style>
 
@@ -33,7 +33,11 @@
             justify-content: center;
             align-items: center;
 
-            font-family: Arial, sans-serif;
+            padding: 25px;
+
+            font-family:
+                Arial,
+                sans-serif;
 
             color: white;
 
@@ -43,19 +47,19 @@
 
                 radial-gradient(
                     circle at 20% 20%,
-                    rgba(255,182,193,0.4),
+                    rgba(255,182,193,0.25),
                     transparent 35%
                 ),
 
                 radial-gradient(
                     circle at 80% 30%,
-                    rgba(221,160,221,0.3),
+                    rgba(221,160,221,0.20),
                     transparent 35%
                 ),
 
                 radial-gradient(
                     circle at 50% 90%,
-                    rgba(255,218,224,0.3),
+                    rgba(255,218,224,0.18),
                     transparent 40%
                 ),
 
@@ -73,16 +77,21 @@
         ========================= */
 
         .stars {
+
             position: fixed;
+
             inset: 0;
+
             pointer-events: none;
         }
+
 
         .star {
 
             position: absolute;
 
             width: 3px;
+
             height: 3px;
 
             border-radius: 50%;
@@ -118,14 +127,19 @@
 
         .card {
 
-            width: min(90%, 520px);
+            width: min(92%, 620px);
 
-            padding: 45px 30px;
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            padding:
+                48px 38px;
 
             text-align: center;
 
             background:
-                rgba(255,255,255,0.08);
+                rgba(255,255,255,0.075);
 
             border:
                 1px solid
@@ -133,9 +147,11 @@
 
             border-radius: 28px;
 
-            backdrop-filter: blur(18px);
+            backdrop-filter:
+                blur(18px);
 
-            -webkit-backdrop-filter: blur(18px);
+            -webkit-backdrop-filter:
+                blur(18px);
 
             box-shadow:
 
@@ -183,9 +199,9 @@
 
         .heart {
 
-            font-size: 70px;
+            font-size: 64px;
 
-            margin-bottom: 20px;
+            margin-bottom: 18px;
 
             animation:
                 heartbeat 1.4s infinite;
@@ -206,45 +222,76 @@
             }
 
             50% {
-                transform: scale(1.15);
+                transform: scale(1.12);
             }
 
         }
 
 
         /* =========================
-           TEXT
+           HOME
         ========================= */
 
-        h1 {
+        .home-title {
 
-            font-size: 32px;
+            font-size: 16px;
 
-            font-weight: 600;
+            letter-spacing: 1px;
+
+            color:
+                rgba(255,255,255,0.65);
 
             margin-bottom: 25px;
         }
 
 
-        p {
+        h1 {
 
-            font-size: 19px;
+            font-size: 30px;
 
-            line-height: 1.8;
+            font-weight: 600;
 
-            color: #f5dfe7;
+            line-height: 1.4;
 
-            margin: 0;
+            margin:
+                0 0 25px;
         }
 
 
+        p {
+
+            font-size: 18px;
+
+            line-height: 1.9;
+
+            color: #f5dfe7;
+
+            margin:
+                0 0 18px;
+        }
+
+
+        .name {
+
+            color: white;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           QUESTION
+        ========================= */
+
         .question {
 
-            margin-top: 20px;
+            margin-top: 30px;
 
             font-size: 21px;
 
             font-weight: bold;
+
+            line-height: 1.6;
 
             color: white;
         }
@@ -260,17 +307,11 @@
 
             width: 100%;
 
-            height: 170px;
+            height: 190px;
 
             position: relative;
 
-            display: flex;
-
-            justify-content: center;
-
-            align-items: flex-start;
-
-            gap: 20px;
+            overflow: hidden;
         }
 
 
@@ -280,7 +321,8 @@
 
         button {
 
-            padding: 14px 32px;
+            padding:
+                14px 32px;
 
             border: none;
 
@@ -302,7 +344,14 @@
 
         #yes {
 
-            position: relative;
+            position: absolute;
+
+            left: 50%;
+
+            top: 0;
+
+            transform:
+                translateX(-115%);
 
             background:
                 linear-gradient(
@@ -327,7 +376,9 @@
 
         #yes:hover {
 
-            transform: scale(1.08);
+            transform:
+                translateX(-115%)
+                scale(1.08);
 
             box-shadow:
                 0 10px 35px
@@ -341,11 +392,14 @@
 
         #no {
 
-            position: relative;
+            position: absolute;
 
-            left: auto;
+            left: 50%;
 
-            top: auto;
+            top: 0;
+
+            transform:
+                translateX(15%);
 
             background:
                 rgba(255,255,255,0.12);
@@ -359,8 +413,8 @@
             z-index: 5;
 
             transition:
-                left 0.15s ease,
-                top 0.15s ease;
+                left 0.12s ease,
+                top 0.12s ease;
         }
 
 
@@ -376,7 +430,36 @@
         ========================= */
 
         .hidden {
+
             display: none;
+        }
+
+
+        /* =========================
+           YES MESSAGE
+        ========================= */
+
+        .love-message {
+
+            font-size: 19px;
+
+            line-height: 2;
+
+            color: #f8e8ed;
+
+            margin-top: 15px;
+        }
+
+
+        .ending {
+
+            margin-top: 30px;
+
+            font-size: 21px;
+
+            color: white;
+
+            font-weight: bold;
         }
 
 
@@ -413,6 +496,7 @@
             }
 
             15% {
+
                 opacity: 0.8;
             }
 
@@ -434,43 +518,71 @@
 
         @media (max-width:600px) {
 
+            body {
+
+                padding: 15px;
+            }
+
+
             .card {
 
-                width: 90%;
+                width: 94%;
+
+                max-height: 92vh;
 
                 padding:
-                    38px 22px;
+                    35px 22px;
+
+                border-radius: 24px;
             }
+
 
             .heart {
-                font-size: 60px;
+
+                font-size: 55px;
             }
+
 
             h1 {
-                font-size: 27px;
+
+                font-size: 25px;
             }
+
 
             p {
-                font-size: 17px;
+
+                font-size: 16px;
+
+                line-height: 1.8;
             }
 
+
             .question {
-                font-size: 19px;
+
+                font-size: 18px;
             }
+
 
             button {
 
                 padding:
-                    13px 27px;
+                    13px 26px;
 
-                font-size: 16px;
+                font-size: 15px;
             }
+
 
             .buttons {
 
-                height: 170px;
+                height: 190px;
+            }
 
-                gap: 15px;
+
+            .love-message {
+
+                font-size: 17px;
+
+                line-height: 1.9;
             }
 
         }
@@ -492,12 +604,12 @@
 
 
     <!-- =========================
-         MAIN CARD
+         HOME PAGE
     ========================= -->
 
     <div
         class="card"
-        id="mainCard">
+        id="homeCard">
 
 
         <div class="heart">
@@ -505,25 +617,64 @@
         </div>
 
 
+        <div class="home-title">
+            ❤️ ANA SAYFA
+        </div>
+
+
         <h1>
-            Sana bir şey sormak istiyorum...
+            Hayatıma giren en güzel insana…
         </h1>
 
 
         <p>
-            Seni gerçekten çok seviyorum.
+            <span class="name">
+                Güzel Berra'm,
+            </span>
         </p>
 
 
         <p>
-            Ve bunu bilmek istiyorum...
+            Belki sana hissettiğim her şeyi
+            kelimelerle anlatamam.
+        </p>
+
+
+        <p>
+            Bu yüzden kendi ellerimle
+            senin için küçük bir şey yapmak istedim.
+        </p>
+
+
+        <p>
+            Sana ait olacak ve beni özlediğinde
+            tekrar dönüp bakabileceğin
+            küçük bir şey…
+        </p>
+
+
+        <p>
+            Programlayabileceğim onca şeyin arasında,
+            senin için hazırladığım bu sayfa
+            benim için en güzeli.
+        </p>
+
+
+        <p>
+            Çünkü bu sayfadaki her şeyin
+            bir anlamı var…
+            <br>
+            O da sensin. ❤️
         </p>
 
 
         <p class="question">
-            Sen de beni aynı şekilde seviyor musun? ❤️
+            Sen de beni aynı şekilde seviyor musun,
+            güzelim? ❤️
         </p>
 
+
+        <!-- BUTTONS -->
 
         <div
             class="buttons"
@@ -546,7 +697,7 @@
 
 
     <!-- =========================
-         YES RESULT
+         YES PAGE
     ========================= -->
 
     <div
@@ -555,7 +706,7 @@
 
 
         <div class="heart">
-            ❤️
+            🌹
         </div>
 
 
@@ -564,16 +715,49 @@
         </h1>
 
 
-        <p>
-            Seni seviyorum.
-        </p>
+        <div class="love-message">
+
+            Seni, bu kelimelerin
+            anlatabileceğinden çok daha fazla seviyorum.
+
+            <br><br>
+
+            Detaylarını, gülüşünü,
+            konuşma şeklini seviyorum.
+
+            <br><br>
+
+            Ve telefonumda adını gördüğümde
+            hissettiğim o güzel duyguyu seviyorum.
+
+            <br><br>
+
+            Bazen aramızdaki mesafe çok büyük olabilir,
+            ama kalbimin bu mesafeyi hiç hissetmediğini
+            bilmeni istiyorum.
+
+            <br><br>
+
+            Sen sadece sevdiğim biri değilsin…
+
+            <br><br>
+
+            Sen, her geçen gün daha da tanımaya
+            devam etmek istediğim kişisin. ❤️
+
+        </div>
+
+
+        <div class="ending">
+            İyi ki varsın, Güzel Berra'm. 🌹
+        </div>
 
 
     </div>
 
 
     <!-- =========================
-         NO RESULT
+         NO PAGE
     ========================= -->
 
     <div
@@ -653,8 +837,8 @@
             document.getElementById("no");
 
 
-        const mainCard =
-            document.getElementById("mainCard");
+        const homeCard =
+            document.getElementById("homeCard");
 
 
         const yesCard =
@@ -670,7 +854,7 @@
 
 
         /* =========================
-           SEND ANSWER
+           FORMSPREE
         ========================= */
 
         async function sendAnswer(answer) {
@@ -687,7 +871,7 @@
 
             formData.append(
                 "_subject",
-                "Someone answered your question ❤️"
+                "Berra answered ❤️"
             );
 
 
@@ -712,7 +896,7 @@
             catch (error) {
 
                 console.log(
-                    "Could not send answer."
+                    "Answer could not be sent."
                 );
 
             }
@@ -733,7 +917,7 @@
                 );
 
 
-                mainCard.classList.add(
+                homeCard.classList.add(
                     "hidden"
                 );
 
@@ -750,31 +934,10 @@
 
 
         /* =========================
-           NO ESCAPE
+           INFINITE NO ESCAPE
         ========================= */
 
-        let attempts = 0;
-
-
-        no.addEventListener(
-            "mouseenter",
-            moveNo
-        );
-
-
         function moveNo() {
-
-            attempts++;
-
-
-            if (attempts > 8) {
-                return;
-            }
-
-
-            no.style.position =
-                "absolute";
-
 
             const area =
                 buttonArea.getBoundingClientRect();
@@ -792,15 +955,21 @@
 
 
             const maxX =
-                area.width -
-                noWidth -
-                padding;
+                Math.max(
+                    padding,
+                    area.width -
+                    noWidth -
+                    padding
+                );
 
 
             const maxY =
-                area.height -
-                noHeight -
-                padding;
+                Math.max(
+                    padding,
+                    area.height -
+                    noHeight -
+                    padding
+                );
 
 
             const randomX =
@@ -821,6 +990,10 @@
                 );
 
 
+            no.style.transform =
+                "none";
+
+
             no.style.left =
                 randomX + "px";
 
@@ -828,21 +1001,48 @@
             no.style.top =
                 randomY + "px";
 
-
-            if (attempts >= 8) {
-
-                no.removeEventListener(
-                    "mouseenter",
-                    moveNo
-                );
-
-            }
-
         }
 
 
+        /* Desktop */
+
+        no.addEventListener(
+            "mouseenter",
+            moveNo
+        );
+
+
+        /* Mobile */
+
+        no.addEventListener(
+            "touchstart",
+            function(event) {
+
+                event.preventDefault();
+
+                moveNo();
+
+            },
+            {
+                passive: false
+            }
+        );
+
+
+        no.addEventListener(
+            "pointerdown",
+            function(event) {
+
+                event.preventDefault();
+
+                moveNo();
+
+            }
+        );
+
+
         /* =========================
-           NO
+           NO CLICK
         ========================= */
 
         no.addEventListener(
@@ -854,7 +1054,7 @@
                 );
 
 
-                mainCard.classList.add(
+                homeCard.classList.add(
                     "hidden"
                 );
 
@@ -945,7 +1145,7 @@
 
 
         /* =========================
-           MANY HEARTS
+           MANY HEARTS AFTER YES
         ========================= */
 
         function createManyHearts() {
